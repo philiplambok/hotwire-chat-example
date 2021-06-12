@@ -1,0 +1,5 @@
+<%= form_with(model: chat) do |form| %>
+  <div class="mb-3">
+    <%= form.text_field :message, class: 'form-control', placeholder: 'Submit the message' %>
+  </div>
+<% end %>

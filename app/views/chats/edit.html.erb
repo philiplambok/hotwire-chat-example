@@ -1,0 +1,11 @@
+<%= turbo_frame_tag dom_id(@chat) do %>
+  <li class="list-group-item">
+    <%= form_with(model: @chat, url: chat_path(@chat), method: :put, class: 'd-flex justify-content-between') do |form| %>
+      <div class="col-auto">
+        <%= form.text_field :message, class: 'form-control' %> 
+      </div>
+      <%= form.submit 'Update', class: 'ml-auto btn btn-primary' %>
+    </div>
+    <% end %>
+  </li>
+<% end %>

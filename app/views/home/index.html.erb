@@ -1,0 +1,23 @@
+<%= turbo_stream_from "chats" %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-6 m-auto">
+      <h4>Chat example app</h4>
+      <marquee>Time: <%= DateTime.now %></marquee>
+      <% if @chats.blank? %>
+        <p>No chats</p>
+      <% else %>
+        <ul id="chats" class="list-group list-group-flush">
+          <% @chats.each do |chat| %>
+            <%= render chat %>
+          <% end %>
+        </ul>
+      <% end %>
+      <hr>
+      <%= turbo_frame_tag "chat_form", id: 'chat_form' do %>
+        <%= render 'chats/form', chat: @new_chat %>
+      <% end %>
+    </div>
+  </div>
+</div>
