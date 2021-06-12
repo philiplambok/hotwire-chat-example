@@ -7,7 +7,7 @@
       <marquee>Time: <%= DateTime.now %></marquee>
       <%= render 'chats/chats', chats: @chats %>
       <hr>
-      <%= turbo_frame_tag "chat_form", id: 'chat_form' do %>
+      <%= turbo_frame_tag "chat_form" do %>
         <%= render 'chats/form', chat: @new_chat %>
       <% end %>
     </div>

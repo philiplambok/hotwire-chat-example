@@ -1,10 +1,9 @@
-<ul id="chats" class="list-group list-group-flush">
+<ul id="chats" class="list-group list-group-flush my-4">
   <% if chats.blank? %>
-    <p>No chats</p>
+    <p class="text-center my-4">No chats</p>
   <% else %>
       <% chats.each do |chat| %>
         <%= render chat %>
       <% end %>
-    </ul>
   <% end %>
 </ul>
