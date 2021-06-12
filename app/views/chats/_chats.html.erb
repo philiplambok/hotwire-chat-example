@@ -1,0 +1,10 @@
+<ul id="chats" class="list-group list-group-flush">
+  <% if chats.blank? %>
+    <p>No chats</p>
+  <% else %>
+      <% chats.each do |chat| %>
+        <%= render chat %>
+      <% end %>
+    </ul>
+  <% end %>
+</ul>

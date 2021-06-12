@@ -31,7 +31,7 @@ class ChatsController < ApplicationController
     chat.destroy!
     respond_to do |format|
       format.html do
-        redirect_to root_path
+        head :no_content
       end
     end
   end
