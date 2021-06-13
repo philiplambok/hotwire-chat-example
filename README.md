@@ -1,6 +1,7 @@
 # Hotwire Chat Example App
 
-Sample chat app that written with Turbo Hotwire.
+The sample chat app is written with Turbo Hotwire.
+
 
 ![demo app](/hotwire-one.gif)
 
