@@ -21,7 +21,7 @@ class ChatsController < ApplicationController
     chat.update!(chat_params)
     respond_to do |format|
       format.html do
-        render partial: 'chats/chat', locals: { chat: chat }
+        redirect_to chat_path(chat)
       end
     end
   end

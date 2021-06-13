@@ -2,7 +2,7 @@
   <li class="list-group-item d-flex justify-content-between">
     <%= chat.message %>
     <div>
-      <%= link_to 'Edit', edit_chat_path(chat, time: Time.now.to_i) %>
+      <%= link_to 'Edit', edit_chat_path(chat) %>
       <%= link_to 'Remove', chat_path(chat), method: :delete %>
     </div>
   </li>
